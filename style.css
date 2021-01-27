@@ -1,0 +1,264 @@
+html {
+  font-size: 62.5%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+.container .work {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+  left: 0;
+  background-position-y: 100%;
+  background-image: url(./images/pattern-curve.svg);
+  background-repeat: no-repeat;
+  background-size: 50%;
+  animation-name: fade;
+  animation-duration: 0.5s;
+  animation-delay: 0.05s;
+}
+.container .work__info {
+  position: absolute;
+  top: 0;
+  left: 35%;
+  transform: translate(-35%, 50%);
+  width: 29rem;
+  height: 17rem;
+  z-index: 3;
+  transition: all 1s ease;
+}
+.container .work__info .image2 {
+  width: 4rem;
+  height: 4rem;
+  object-fit: cover;
+  position: absolute;
+  top: 0%;
+  left: 30%;
+  transform: translate(-30%, -60%);
+}
+.container .work__info .infoPeople:not(:nth-child(2)) {
+  display: none;
+}
+.container .work__info .infoPeople {
+  position: absolute;
+  transition: all 1s ease;
+}
+.container .work__info .infoPeople .text {
+  font-family: "Inter", sans-serif;
+  font-size: 1.5rem;
+  color: #494663;
+  padding-bottom: 2rem;
+}
+.container .work__info .infoPeople .person .name {
+  font-family: "Inter", sans-serif;
+  color: #21203f;
+  font-size: 1.1rem;
+}
+.container .work__info .infoPeople .person .job {
+  font-family: "Inter", sans-serif;
+  color: #bbb9c4;
+  font-size: 0.9rem;
+}
+.container .work__avatar {
+  position: absolute;
+  top: 0%;
+  left: 80%;
+  transform: translate(-80%, 4%);
+}
+.container .work__avatar .image3 {
+  width: 30rem;
+  height: 30rem;
+  object-fit: cover;
+}
+.container .work__avatar .ava:not(:first-child) {
+  display: none;
+}
+.container .work__avatar .ava {
+  width: 24rem;
+  height: 24rem;
+  object-fit: cover;
+  position: absolute;
+  top: 50%;
+  left: 45%;
+  transform: translate(-45%, -50%);
+}
+.container .work__avatar .button-pre {
+  outline: none;
+  position: absolute;
+  top: 85.8%;
+  left: 15%;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 1px solid transparent;
+  border-bottom-left-radius: 10rem;
+  border-top-left-radius: 10rem;
+  margin-right: -0.3rem;
+}
+.container .work__avatar .button-pre .pre {
+  cursor: pointer;
+}
+.container .work__avatar .button-next {
+  outline: none;
+  position: absolute;
+  top: 85.8%;
+  left: 23.4%;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 1px solid transparent;
+  border-bottom-right-radius: 10rem;
+  border-top-right-radius: 10rem;
+}
+.container .work__avatar .button-next .next {
+  cursor: pointer;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@media screen and (max-width: 1279px) {
+  .container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+  }
+  .container .work {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    left: 0;
+    background-position-y: 100%;
+    background-image: url(./images/pattern-curve.svg);
+    background-repeat: no-repeat;
+    background-size: 50%;
+    animation-name: fade;
+    animation-duration: 0.5s;
+    animation-delay: 0.05s;
+  }
+  .container .work__info {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    width: 17rem;
+    height: 17rem;
+    z-index: 3;
+    transition: all 1s ease;
+  }
+  .container .work__info .image2 {
+    width: 3rem;
+    height: 3rem;
+    object-fit: cover;
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, -60%);
+  }
+  .container .work__info .infoPeople:not(:nth-child(2)) {
+    display: none;
+  }
+  .container .work__info .infoPeople {
+    position: absolute;
+    transition: all 1s ease;
+  }
+  .container .work__info .infoPeople .text {
+    font-family: "Inter", sans-serif;
+    font-size: 0.9rem;
+    color: #494663;
+    padding-bottom: 2rem;
+    text-align: center;
+  }
+  .container .work__info .infoPeople .person {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+  }
+  .container .work__info .infoPeople .person .name {
+    font-family: "Inter", sans-serif;
+    color: #21203f;
+    font-size: 0.9rem;
+    padding-bottom: 0.7rem;
+  }
+  .container .work__info .infoPeople .person .job {
+    font-family: "Inter", sans-serif;
+    color: #bbb9c4;
+    font-size: 0.7rem;
+  }
+  .container .work__avatar {
+    position: absolute;
+    top: 4%;
+    left: 40%;
+    transform: translate(-40%, 4%);
+  }
+  .container .work__avatar .image3 {
+    width: 16rem;
+    height: 15rem;
+    object-fit: cover;
+  }
+  .container .work__avatar .ava:not(:first-child) {
+    display: none;
+  }
+  .container .work__avatar .ava {
+    width: 13rem;
+    height: 13rem;
+    object-fit: cover;
+    position: absolute;
+    top: 50%;
+    left: 45%;
+    transform: translate(-45%, -50%);
+  }
+  .container .work__avatar .button-pre {
+    outline: none;
+    position: absolute;
+    top: 85.8%;
+    left: 34.7%;
+    width: 2.5rem;
+    height: 2.5rem;
+    border: 1px solid transparent;
+    border-bottom-left-radius: 10rem;
+    border-top-left-radius: 10rem;
+    margin-right: -0.3rem;
+  }
+  .container .work__avatar .button-pre .pre {
+    cursor: pointer;
+  }
+  .container .work__avatar .button-next {
+    outline: none;
+    position: absolute;
+    top: 85.8%;
+    left: 50%;
+    width: 2.5rem;
+    height: 2.5rem;
+    border: 1px solid transparent;
+    border-bottom-right-radius: 10rem;
+    border-top-right-radius: 10rem;
+  }
+  .container .work__avatar .button-next .next {
+    cursor: pointer;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

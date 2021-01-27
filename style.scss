@@ -1,0 +1,312 @@
+// Primary
+
+$DarkBlue: hsl(240, 38%, 20%);
+$GrayishBlue: hsl(240, 18%, 77%);
+
+$fontTitle :1.3rem;
+$fontText:0.9rem;
+$black :rgb(74,82,90);
+html {
+    font-size: 62.5%;
+  }
+  *
+  {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: 'Inter', sans-serif;
+  }
+  a {
+    text-decoration: none;
+  }
+  @mixin size($width, $height) {
+    width: $width;
+    height: $height;
+  }
+  @mixin flexCen($align, $just, $wrap, $direct) {
+    display: flex;
+    align-items: $align;
+    justify-content: $just;
+    flex-wrap: $wrap;
+    flex-direction: $direct;
+  }
+.container
+{
+  position: relative;
+  @include size(100vw,100vh);
+  .work
+  {
+      position: absolute;
+      @include size(100%,100%);
+      bottom:0;
+      left:0;
+      background-position-y: 100%;
+      background-image: url(./images/pattern-curve.svg);
+      background-repeat: no-repeat;
+      background-size: 50%;
+      animation-name: fade;
+      animation-duration: 0.5s;
+      animation-delay: 0.05s;
+      &__info
+      {
+          position: absolute;
+          top:0;
+          left:35%;
+          transform: translate(-35%,50%);
+          @include size(29rem,17rem);
+        //   background-color: rosybrown;
+          z-index: 3;
+          transition: all 1s ease;
+          .image2
+          {
+              @include size(4rem,4rem);
+              object-fit: cover;
+              position: absolute;
+              top:0%;
+              left:30%;
+              transform: translate(-30%,-60%);
+          }
+          .infoPeople:not(:nth-child(2))
+          {
+            display: none;
+          }
+          .infoPeople
+          {
+             position: absolute;
+             transition: all 1s ease;
+            .text
+            {
+              font-family: 'Inter', sans-serif;
+              font-size: 1.5rem;
+              color:rgb(73,70,99);
+              padding-bottom: 2rem;
+            }
+            .person
+            {
+              .name
+              {
+                font-family: 'Inter', sans-serif;
+                color:rgb(33,32,63);
+                font-size: 1.1rem;
+              }
+              .job
+              {
+                font-family: 'Inter', sans-serif;
+                color:rgb(187,185,196);
+                font-size: 0.9rem;
+              }
+            }
+          }
+      }
+      &__avatar
+      {
+        position: absolute;
+        top:0%;
+        left:80%;
+        transform: translate(-80%,4%);
+        // background-color: red;
+        .image3
+        {
+            @include size(30rem,30rem);
+            object-fit: cover;
+        }
+        .ava:not(:first-child)
+        {
+          display: none;
+        }
+        .ava
+        {
+            @include size(24rem,24rem);
+            object-fit: cover;
+            position: absolute;
+            top:50%;
+            left:45%;
+            transform: translate(-45%,-50%);
+        }
+        .button-pre
+        {
+          outline: none;
+          position: absolute;
+
+          top:85.8%;
+          left:15%;
+          @include size(2.5rem,2.5rem);
+          border: 1px solid transparent;
+          border-bottom-left-radius: 10rem;
+          border-top-left-radius: 10rem;
+          margin-right: -0.3rem;
+          .pre
+          {
+           cursor: pointer;
+          }
+        }
+        .button-next
+        {
+          outline: none;
+          position: absolute;
+          top:85.8%;
+          left:23.4%;
+          @include size(2.5rem,2.5rem);
+          border: 1px solid transparent;
+          border-bottom-right-radius: 10rem;
+          border-top-right-radius: 10rem;
+          .next
+          {
+           cursor: pointer;
+          }
+        }
+      }
+  }
+}
+
+@keyframes fade 
+{
+  from{
+    opacity: 0.4;
+  }
+  to
+  {
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width:1279px)
+{
+  .container
+{
+  position: relative;
+  @include size(100vw,100vh);
+  .work
+  {
+      position: absolute;
+      @include size(100%,100%);
+      bottom:0;
+      left:0;
+      background-position-y: 100%;
+      background-image: url(./images/pattern-curve.svg);
+      background-repeat: no-repeat;
+      background-size: 50%;
+      animation-name: fade;
+      animation-duration: 0.5s;
+      animation-delay: 0.05s;
+      &__info
+      {
+          position: absolute;
+          top:35%;
+          left:50%;
+          transform: translate(-50%,50%);
+          @include size(17rem,17rem);
+        //   background-color: rosybrown;
+          z-index: 3;
+          transition: all 1s ease;
+          .image2
+          {
+              @include size(3rem,3rem);
+              object-fit: cover;
+              position: absolute;
+              top:0%;
+              left:50%;
+              transform: translate(-50%,-60%);
+          }
+          .infoPeople:not(:nth-child(2))
+          {
+            display: none;
+          }
+          .infoPeople
+          {
+             position: absolute;
+             transition: all 1s ease;
+             
+            .text
+            {
+              font-family: 'Inter', sans-serif;
+              font-size: 0.9rem;
+              color:rgb(73,70,99);
+              padding-bottom: 2rem;
+              text-align: center;
+            }
+            .person
+            {
+              text-align: center;
+              display: flex;
+              flex-direction: column;
+              .name
+              {
+                font-family: 'Inter', sans-serif;
+                color:rgb(33,32,63);
+                font-size: 0.9rem;
+                padding-bottom: 0.7rem;
+              }
+              .job
+              {
+                font-family: 'Inter', sans-serif;
+                color:rgb(187,185,196);
+                font-size: 0.7rem;
+              }
+            }
+          }
+      }
+      &__avatar
+      {
+        position: absolute;
+        top:4%;
+        left:40%;
+        transform: translate(-40%,4%);
+        // background-color: red;
+        .image3
+        {
+            @include size(16rem,15rem);
+            object-fit: cover;
+        }
+        .ava:not(:first-child)
+        {
+          display: none;
+        }
+        .ava
+        {
+            @include size(13rem,13rem);
+            object-fit: cover;
+            position: absolute;
+            top:50%;
+            left:45%;
+            transform: translate(-45%,-50%);
+        }
+        .button-pre
+        {
+          outline: none;
+          position: absolute;
+
+          top:85.8%;
+          left:34.7%;
+          @include size(2.5rem,2.5rem);
+          border: 1px solid transparent;
+          border-bottom-left-radius: 10rem;
+          border-top-left-radius: 10rem;
+          margin-right: -0.3rem;
+          .pre
+          {
+           cursor: pointer;
+          }
+        }
+        .button-next
+        {
+          outline: none;
+          position: absolute;
+          top:85.8%;
+          left:50%;
+          @include size(2.5rem,2.5rem);
+          border: 1px solid transparent;
+          border-bottom-right-radius: 10rem;
+          border-top-right-radius: 10rem;
+          .next
+          {
+           cursor: pointer;
+          }
+        }
+      }
+  }
+}
+
+}
